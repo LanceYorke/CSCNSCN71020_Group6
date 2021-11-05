@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -47,15 +49,21 @@ int printShapeMenu() {
 	printf_s("0. Exit\n");
 
 	int shapeChoice;
+	char term;
 
 	printf_s("Enter number: ");
-	scanf_s("%1o", &shapeChoice);
+
+	if (scanf("%d%c", &shapeChoice, &term) != 2 || term != '\n') {
+		printf("Invalid value entered.\n");
+		return 0;
+	}
 
 	return shapeChoice;
 }
 
 int* getTriangleSides(int* triangleSides) {
 	printf_s("Enter the three sides of the triangle: ");
+
 	for (int i = 0; i < 3; i++)
 	{
 		scanf_s("%d", &triangleSides[i]);
