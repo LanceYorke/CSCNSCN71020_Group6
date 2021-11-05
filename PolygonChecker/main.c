@@ -18,6 +18,9 @@ int main() {
 
 		switch (shapeChoice)
 		{
+		case 2:
+			//For the "getInsideAngles" function
+			break;
 		case 1:
 			printf_s("Triangle selected.\n");
 			int triangleSides[NUMBER_OF_SIDES] = { 0, 0, 0 };
@@ -46,6 +49,7 @@ void printWelcome() {
 }
 
 int printShapeMenu() {
+	printf_s("2. Inside angles\n");
 	printf_s("1. Triangle\n");
 	printf_s("0. Exit\n");
 
@@ -68,7 +72,7 @@ int* getTriangleSides(int* triangleSides) {
 	for (int i = 0; i < 3; i++)
 	{
 		if (scanf("%d", &triangleSides[i]) != 1) {
-			printf("Invalid value entered");
+			printf("Invalid value entered\n");
 			exit(1);
 		}
 	}
