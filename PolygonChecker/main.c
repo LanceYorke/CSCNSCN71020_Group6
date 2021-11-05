@@ -66,7 +66,10 @@ int* getTriangleSides(int* triangleSides) {
 
 	for (int i = 0; i < 3; i++)
 	{
-		scanf_s("%d", &triangleSides[i]);
+		if (scanf("%d", &triangleSides[i]) != 1) {
+			printf("Invalid value entered");
+			exit(1);
+		}
 	}
 	return triangleSides;
 }
