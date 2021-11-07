@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -6,6 +8,7 @@
 #include "rectangleSolver.h"
 
 int side = 0;
+#define NUMBER_OF_SIDES	3
 
 int main() {
 	bool continueProgram = true;
@@ -16,9 +19,12 @@ int main() {
 
 		switch (shapeChoice)
 		{
+		case 2:
+			//For the "getInsideAngles" function
+			break;
 		case 1:
 			printf_s("Triangle selected.\n");
-			int triangleSides[3] = { 0, 0, 0 };
+			int triangleSides[NUMBER_OF_SIDES] = { 0, 0, 0 };
 			int* triangleSidesPtr = getTriangleSides(triangleSides);
 			//printf_s("! %d\n", triangleSidesPtr[0]);
 			char* result = analyzeTriangle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
@@ -52,23 +58,33 @@ void printWelcome() {
 }
 
 int printShapeMenu() {
+	printf_s("2. Inside angles\n");
 	printf_s("1. Triangle\n");
 	printf_s("3. Rectangle\n");
 	printf_s("0. Exit\n");
 
 	int shapeChoice;
+	char term;
 
 	printf_s("Enter number: ");
-	scanf_s("%1o", &shapeChoice);
+
+	if (scanf("%d%c", &shapeChoice, &term) != 2 || term != '\n') {
+		printf("Invalid value entered.\n");
+		return 0;
+	}
 
 	return shapeChoice;
 }
 
 int* getTriangleSides(int* triangleSides) {
 	printf_s("Enter the three sides of the triangle: ");
+
 	for (int i = 0; i < 3; i++)
 	{
-		scanf_s("%d", &triangleSides[i]);
+		if (scanf("%d", &triangleSides[i]) != 1) {
+			printf("Invalid value entered\n");
+			exit(1);
+		}
 	}
 	return triangleSides;
 }

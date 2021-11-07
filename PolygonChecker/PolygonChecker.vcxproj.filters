@@ -21,7 +21,7 @@
     <ClCompile Include="triangleSolver.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="rectangleSolver.c">
+    <ClCompile Include="getInsideAngles.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,7 +32,7 @@
     <ClInclude Include="main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="rectangleSolver.h">
+    <ClInclude Include="getInsideAngle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
