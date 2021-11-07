@@ -19,6 +19,13 @@ int main() {
 
 		switch (shapeChoice)
 		{
+		case 2:
+			printf_s("Rectangle selected.\n");
+			int rectanglePoints[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
+			int* rectanglePointsPtr = getRectanglePoints(rectanglePoints);
+			char* result1 = analyzeRectangle(rectanglePointsPtr[0], rectanglePointsPtr[1], rectanglePointsPtr[2], rectanglePointsPtr[3], rectanglePointsPtr[4], rectanglePointsPtr[5], rectanglePointsPtr[6], rectanglePointsPtr[7]);
+			//printf_s("%s\n", result1);
+			break;
 		case 1:
 			printf_s("Triangle selected.\n");
 			int triangleSides[NUMBER_OF_SIDES] = { 0, 0, 0 };
@@ -32,13 +39,6 @@ int main() {
 			break;
 		default:
 			printf_s("Invalid value entered.\n");
-			break;
-		case 3:
-			printf_s("Rectangle selected.\n");
-			int rectanglePoints[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
-			int* rectanglePointsPtr = getRectanglePoints(rectanglePoints);
-			char* result1 = analyzeRectangle(rectanglePointsPtr[0], rectanglePointsPtr[1], rectanglePointsPtr[2], rectanglePointsPtr[3], rectanglePointsPtr[4], rectanglePointsPtr[5] , rectanglePointsPtr[6] , rectanglePointsPtr[7]);
-			//printf_s("%s\n", result1);
 			break;
 
 		}
@@ -55,9 +55,8 @@ void printWelcome() {
 }
 
 int printShapeMenu() {
-	printf_s("2. Inside angles\n");
+	printf_s("2. Rectangle\n");
 	printf_s("1. Triangle\n");
-	printf_s("3. Rectangle\n");
 	printf_s("0. Exit\n");
 
 	int shapeChoice;
