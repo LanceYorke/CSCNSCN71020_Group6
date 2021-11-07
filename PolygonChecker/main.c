@@ -90,7 +90,10 @@ int getRectanglePoints(int* rectanglePoints)
 	printf("Enter eight x and y coordinates: ");
 	for (int i = 0; i < 8; i++)
 	{
-		scanf_s("%d", &rectanglePoints[i]);
+		if (scanf("%d", &rectanglePoints[i]) != 1) {
+			printf("Invalid value entered\n");
+			exit(1);
+		}
 	}
 
 	return rectanglePoints;
