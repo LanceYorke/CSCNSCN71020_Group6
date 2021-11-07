@@ -18,9 +18,6 @@ int main() {
 
 		switch (shapeChoice)
 		{
-		case 2:
-			//For the "getInsideAngles" function
-			break;
 		case 1:
 			printf_s("Triangle selected.\n");
 			int triangleSides[NUMBER_OF_SIDES] = { 0, 0, 0 };
