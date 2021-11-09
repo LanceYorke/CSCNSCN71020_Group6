@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
-
+#include "getInsideAngle.h"
 #include "triangleSolver.h"
 
 char* analyzeTriangle(int side1, int side2, int side3) {
@@ -21,7 +21,7 @@ char* analyzeTriangle(int side1, int side2, int side3) {
 	}
 
 	if (result != "Not a triangle")
-		getInsideAngles(side1, side2, side3);
+    getInsideAngles(side1, side2, side3);
 
 	return result;
 }
