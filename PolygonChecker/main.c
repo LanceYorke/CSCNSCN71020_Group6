@@ -84,7 +84,7 @@ int* getTriangleSides(int* triangleSides) {
 	return triangleSides;
 }
 
-int getRectanglePoints(int* rectanglePoints)
+int* getRectanglePoints(int* rectanglePoints)
 {
 	printf("Enter eight x and y coordinates: ");
 	for (int i = 0; i < 8; i++)
