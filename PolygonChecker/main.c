@@ -9,6 +9,8 @@
 
 int side = 0;
 #define NUMBER_OF_SIDES	3
+#define NUMBER_OF_POINTS 8
+
 int main() {
 	bool continueProgram = true;
 	while (continueProgram) {
@@ -20,7 +22,7 @@ int main() {
 		{
 		case 2:
 			printf_s("Rectangle selected.\n");
-			int rectanglePoints[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
+			int rectanglePoints[NUMBER_OF_POINTS] = { 0, 0, 0, 0, 0, 0, 0, 0 };
 			int* rectanglePointsPtr = getRectanglePoints(rectanglePoints);
             char* result1 = analyzeRectangle(rectanglePointsPtr[0], rectanglePointsPtr[1], rectanglePointsPtr[2], rectanglePointsPtr[3], rectanglePointsPtr[4], rectanglePointsPtr[5], rectanglePointsPtr[6], rectanglePointsPtr[7]);
 			//printf_s("%s\n", result1);
