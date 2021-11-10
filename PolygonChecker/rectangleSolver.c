@@ -2,7 +2,7 @@
 #include <stdbool.h>
 #include "rectangleSolver.h"
 
-char* analyzeRectangle(int x1, int y1, int x2, int y2, int x3,  int y3, int x4, int y4)
+int* analyzeRectangle(int x1, int y1, int x2, int y2, int x3,  int y3, int x4, int y4)
 {
 	int line1 = 0, line2 = 0, line3 = 0, line4 = 0, perimeter= 0, area = 0;
 
