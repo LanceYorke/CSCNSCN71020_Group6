@@ -28,6 +28,9 @@ char* analyzeRectangle(int x1, int y1, int x2, int y2, int x3,  int y3, int x4, 
 
 	printf_s("Perimeter: %d\n", perimeter);
 	printf_s("Area: %d\n", area);
-	return perimeter;
+
+	int AreaAndPerimeter[2] = { area, perimeter };
+
+	return AreaAndPerimeter;
 
 }
