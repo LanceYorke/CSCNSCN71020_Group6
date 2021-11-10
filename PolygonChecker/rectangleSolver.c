@@ -19,15 +19,13 @@ int* analyzeRectangle(int x1, int y1, int x2, int y2, int x3,  int y3, int x4, i
 		line4 = y4 - y1;
 	}
 	if (line1 == 0 || line2 == 0 || line3 == 0 || line4 == 0) {
-		printf_s("Values entered do not form a rectangle\n");
+		int* output[1] = { 0 };
+		return output;
 	}
 
 
 	perimeter = line1 + line2 + line3 + line4;
 	area = line1 * line2;
-
-	printf_s("Perimeter: %d\n", perimeter);
-	printf_s("Area: %d\n", area);
 
 	int AreaAndPerimeter[2] = { area, perimeter };
 
