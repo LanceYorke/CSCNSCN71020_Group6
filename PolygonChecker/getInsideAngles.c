@@ -22,12 +22,12 @@ int* getInsideAngles(int side1, int side2, int side3) {
 		largestSide = side3;
 		second = (double)side1;
 		third = (double)side2;
-	}
+	}//finds the largest side of all of the angles and marks it down
 	largest0 = pow(largestSide, TWOS_COMPLIMENT);
-	largest1 = pow(second, TWOS_COMPLIMENT);
+	largest1 = pow(second, TWOS_COMPLIMENT);//uses cosine law to find the first angle witch requires using the square root of all of the sides
 	largest2 = pow(third, TWOS_COMPLIMENT);
 	finallargest = (largest1 + largest2);
-	if (finallargest > 0)
+	if (finallargest > 0)// this if statement is used to find out if the largest angle is positive or negative
 	{
 		cosineone = (largest0 - finallargest);
 	}
@@ -37,15 +37,15 @@ int* getInsideAngles(int side1, int side2, int side3) {
 	}
 	cosinehelper = (NEGATIVE_TWO * second * third);
 	cosinetwo = (cosineone / cosinehelper);
-	Angle1 = (acos(cosinetwo) * (180/PI));
+	Angle1 = (acos(cosinetwo) * (180/PI));//finds the angle by converting the number that is in radians to degrees
 	sin1 = (sin(Angle1 * (180 / PI)));
-	sin1 = fabs(sin1);
+	sin1 = fabs(sin1);//since sin is weird in VS with this I found I need to reverse the angle to get the correct answer
 	sin2 = ((second * sin1) / ((double)largestSide));
-	Angle2 = (asin(sin2) * (180 / PI));
+	Angle2 = (asin(sin2) * (180 / PI));//uses sin law with the angle I got from cosine and instead uses sine to find the 2nd angle
 
-	Angle3 = (180 - Angle1 - Angle2);
+	Angle3 = (180 - Angle1 - Angle2);//finally to get the third angle since all angles in a triangle must add up to 180 degrees I subtract the angles I have recieved by both of them to get the final angle of the triangle
 
-	printf("Your 3 angles are: %f, %f and %f\n", Angle1, Angle2, Angle3);
+	printf("Your 3 angles are: %f, %f and %f\n", Angle1, Angle2, Angle3);//prints all of the angles
 
 	return 0;
 }
