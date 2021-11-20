@@ -4,7 +4,7 @@
 #define TWOS_COMPLIMENT	2
 #define PI	3.14
 
-int* getInsideAngles(int side1, int side2, int side3) {
+int getInsideAngles(int side1, int side2, int side3) {
 	int largestSide;
 	double second = 0, third = 0, largest0 = 0, largest1 = 0, largest2 = 0, finallargest = 0, cosinehelper = 0, cosineone = 0, cosinetwo = 0, Angle1 = 0;
 	double sin1 = 0, sin2 = 0, Angle2 = 0, Angle3 = 0, isodouble = 0, smallestSize = 0;
@@ -64,9 +64,10 @@ int* getInsideAngles(int side1, int side2, int side3) {
 		Angle2 = Angle1;
 		Angle3 = (180 - (Angle1 + Angle2));
 	}
-	printf("Your 3 angles are: %f, %f and %f\n", Angle1, Angle2, Angle3);//prints all of the angles
+	printf_s("Your 3 angles are: %f, %f and %f\n", Angle1, Angle2, Angle3);//prints all of the angles
 	if ((Angle1 + Angle2 + Angle3) == 180)
 	{
 		return 1;
 	}
+	return 0;
 }

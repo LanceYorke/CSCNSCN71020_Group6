@@ -6,6 +6,7 @@
 #include "main.h"
 #include "triangleSolver.h"
 #include "rectangleSolver.h"
+#include "getInsideAngle.h"
 
 int side = 0;
 #define NUMBER_OF_SIDES	3
@@ -70,7 +71,7 @@ int printShapeMenu() {
 
 	printf_s("Enter number: ");
 
-	if (scanf("%d%c", &shapeChoice, &term) != 2 || term != '\n') {
+	if (scanf_s("%d%c", &shapeChoice, &term) != 2 || term != '\n') {
 		printf("Invalid value entered.\n");
 		return 0;
 	}
@@ -83,8 +84,8 @@ int* getTriangleSides(int* triangleSides) {
 
 	for (int i = 0; i < 3; i++)
 	{
-		if (scanf("%d", &triangleSides[i]) != 1) {
-			printf("Invalid value entered\n");
+		if (scanf_s("%d", &triangleSides[i]) != 1) {
+			printf_s("Invalid value entered\n");
 			exit(1);
 		}
 	}
@@ -93,11 +94,11 @@ int* getTriangleSides(int* triangleSides) {
 
 int* getRectanglePoints(int* rectanglePoints)
 {
-	printf("Enter eight x and y coordinates: ");
+	printf_s("Enter eight x and y coordinates: ");
 	for (int i = 0; i < 8; i++)
 	{
-		if (scanf("%d", &rectanglePoints[i]) != 1) {
-			printf("Invalid value entered\n");
+		if (scanf_s("%d", &rectanglePoints[i]) != 1) {
+			printf_s("Invalid value entered\n");
 			exit(1);
 		}
 	}

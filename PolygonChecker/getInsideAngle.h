@@ -1,3 +1,3 @@
 #pragma once
 
-int* getInsideAngles(int, int, int);
+int getInsideAngles(int, int, int);
