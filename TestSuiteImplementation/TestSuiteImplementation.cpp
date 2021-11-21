@@ -123,7 +123,7 @@ namespace TestSuiteImplementation
 
 			Assert::AreEqual(expected, result);
 		}
-		TEST_METHOD(TestMethod3)
+		TEST_METHOD(Getting_insideAnglesfor_Scalene)
 		{
 			int side1 = 15;//three different sides for scalene
 			int side2 = 10;

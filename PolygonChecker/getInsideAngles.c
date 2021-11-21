@@ -66,5 +66,7 @@ int getInsideAngles(int side1, int side2, int side3) {
 	{
 		return 1;
 	}
-	return 0;
+	else {
+		return 0;
+	}
 }
