@@ -27,7 +27,9 @@ int* analyzeRectangle(int x1, int y1, int x2, int y2, int x3,  int y3, int x4, i
 	perimeter = line1 + line2 + line3 + line4;
 	area = line1 * line2;
 
-	int AreaAndPerimeter[2] = { area, perimeter };
+	static int AreaAndPerimeter[2];
+	AreaAndPerimeter[0] = area;
+	AreaAndPerimeter[1] = perimeter;
 
 	return AreaAndPerimeter;
 
