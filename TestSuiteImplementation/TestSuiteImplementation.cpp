@@ -2,23 +2,20 @@
 #include "CppUnitTest.h"
 
 extern "C" char* analyzeTriangle(int, int, int);
+extern "C" int getInsideAngles(int, int, int);
+extern "C" int* analyzeRectangle(int, int, int, int , int , int, int, int);
 
-extern "C" {
-#include "main.h"
-#include "getInsideAngle.h"
-#include "triangleSolver.h"
-}
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace UnitTestTriangleSolverFunction
+namespace TestSuiteImplementation
 {
 	TEST_CLASS(UnitTestTriangleSolverFunction)
 	{
 	public:
-		
+
 		TEST_METHOD(TestMethod1)
 		{
-			
+
 		}
 	};
 	TEST_CLASS(GettingInsideAngles)

@@ -1,8 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
 #include "main.h"
 #include "triangleSolver.h"
 #include "rectangleSolver.h"
@@ -71,7 +68,7 @@ int printShapeMenu() {
 
 	printf_s("Enter number: ");
 
-	if (scanf_s("%d%c", &shapeChoice, &term) != 2 || term != '\n') {
+	if (scanf_s("%d%c", &shapeChoice, &term, 2) != 2 || term != '\n') {
 		printf("Invalid value entered.\n");
 		return 0;
 	}

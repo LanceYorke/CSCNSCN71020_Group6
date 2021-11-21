@@ -1,8 +1,4 @@
 #include "getInsideAngle.h"
-#include <math.h>
-#define NEGATIVE_TWO	-2
-#define TWOS_COMPLIMENT	2
-#define PI	3.14
 
 int getInsideAngles(int side1, int side2, int side3) {
 	int largestSide;
@@ -64,6 +60,7 @@ int getInsideAngles(int side1, int side2, int side3) {
 		Angle2 = Angle1;
 		Angle3 = (180 - (Angle1 + Angle2));
 	}
+
 	printf_s("Your 3 angles are: %f, %f and %f\n", Angle1, Angle2, Angle3);//prints all of the angles
 	if ((Angle1 + Angle2 + Angle3) == 180)
 	{
