@@ -13,10 +13,88 @@ namespace TestSuiteImplementation
 	{
 	public:
 
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(DetermineOutcomeOneSideIs0)
 		{
+			//This test method is testing if the function return "Not a triangle" when one side is 0 or less than 0
+
+			int side1 = 0; //Invalid side
+			int side2 = 5;
+			int side3 = 9;
+
+			char* output = "Not a triangle"; //expected output
+
+			char* outputFunction = { analyzeTriangle(side1, side2, side3) };
+
+			Assert::AreEqual(output, outputFunction);
 
 		}
+
+		TEST_METHOD(DetermineOutcomeAllSidesAre0)
+		{
+			//This test method is testing if the function return "Not a triangle" when all sides are 0 or less than 0
+
+			//Invalid sides
+			int side1 = 0; 
+			int side2 = -4;
+			int side3 = 0;
+
+			char* output = "Not a triangle"; //expected output
+
+			char* outputFunction = { analyzeTriangle(side1, side2, side3) };
+
+			Assert::AreEqual(output, outputFunction);
+
+		}
+
+		TEST_METHOD(DetermineOutcomeEquilateralTriangle)
+		{
+			//This test method is testing if the function return "Equilateral triangle" when all sides are equal
+
+			int side1 = 4;
+			int side2 = 4;
+			int side3 = 4;
+
+			char* output = "Equilateral triangle"; //expected output
+
+			char* outputFunction = { analyzeTriangle(side1, side2, side3) };
+
+			Assert::AreEqual(output, outputFunction);
+
+		}
+
+		TEST_METHOD(DetermineOutcomeIsoscelesTriangle)
+		{
+			//This test method is testing if the function return "Isosceles triangle" when two sides are equal
+
+			int side1 = 4;
+			int side2 = 4;
+			int side3 = 7;
+
+			char* output = "Isosceles triangle"; //expected output
+
+			char* outputFunction = { analyzeTriangle(side1, side2, side3) };
+
+			Assert::AreEqual(output, outputFunction);
+
+		}
+
+		TEST_METHOD(DetermineOutcomeScaleneTriangle)
+		{
+			//This test method is testing if the function return "Scalene triangle" when all sides are different
+
+			int side1 = 3;
+			int side2 = 8;
+			int side3 = 2;
+
+			char* output = "Scalene triangle"; //expected output
+
+			char* outputFunction = { analyzeTriangle(side1, side2, side3) };
+
+			Assert::AreEqual(output, outputFunction);
+
+		}
+
+
 	};
 	TEST_CLASS(GettingInsideAngles)
 	{
