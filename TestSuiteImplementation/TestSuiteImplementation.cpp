@@ -153,7 +153,7 @@ namespace TestSuiteImplementation
 			int y3 = 5; 
 			int y4 = 5;
 			int *result;
-			int expected = 12;
+			int expected = 16;
 
 			result = analyzeRectangle(x1, y1, x2, y2, x3, y3, x4, y4);
 			Assert::AreEqual(expected, result[1]);
@@ -172,7 +172,7 @@ namespace TestSuiteImplementation
 			int y3 = 5;
 			int y4 = 5;
 			int* result;
-			int expected = 16;
+			int expected = 12;
 
 			result = analyzeRectangle(x1, y1, x2, y2, x3, y3, x4, y4);
 			Assert::AreEqual(expected, result[0]);
