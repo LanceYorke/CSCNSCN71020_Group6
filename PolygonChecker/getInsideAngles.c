@@ -65,7 +65,7 @@ int getInsideAngles(int side1, int side2, int side3) {
 		Angle1 = 0;
 		Angle2 = 0;
 		Angle3 = 0;
-		printf("This is not a " );
+		printf("it is not a triangle, even if it meets the parameters of a " );
 	}
 	else {
 		printf_s("Your 3 angles are: %f, %f and %f\n", Angle1, Angle2, Angle3);//prints all of the angles
