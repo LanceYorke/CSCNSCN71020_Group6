@@ -17,9 +17,8 @@ char* analyzeTriangle(int side1, int side2, int side3) {
 	else {
 		result = "Scalene triangle";
 	}
-
+	getInsideAngles(side1, side2, side3);
 	if (result != "Not a triangle")
-    getInsideAngles(side1, side2, side3);
 
 	return result;
 }

@@ -60,13 +60,21 @@ int getInsideAngles(int side1, int side2, int side3) {
 		Angle2 = Angle1;
 		Angle3 = (180 - (Angle1 + Angle2));
 	}
-
-	printf_s("Your 3 angles are: %f, %f and %f\n", Angle1, Angle2, Angle3);//prints all of the angles
-	if ((Angle1 + Angle2 + Angle3) == 180)
+	if (largestSide > (second + third))
 	{
-		return 1;
+		Angle1 = 0;
+		Angle2 = 0;
+		Angle3 = 0;
+		printf("This is not a " );
 	}
 	else {
-		return 0;
+		printf_s("Your 3 angles are: %f, %f and %f\n", Angle1, Angle2, Angle3);//prints all of the angles
+		if ((Angle1 + Angle2 + Angle3) == 180)
+		{
+			return 1;
+		}
+		else {
+			return 0;
+		}
 	}
 }
